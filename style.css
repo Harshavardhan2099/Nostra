@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    min-height: 100vw;
 }
 
 .navbar{
@@ -105,12 +106,15 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    height: 100%;
 }
 
 .service-container-two div{
     background-color: #F2F4F7;
     padding: 10px;
     border-radius: 10px;
+    height: 100%;
+    flex-basis: 100%;
 }
 
 .new-arrival{
