@@ -47,6 +47,7 @@ body{
     color: white;
     display: block;
     transition: 1s;
+    z-index: 1;
 }
 
 .side-navbar-links{
@@ -262,6 +263,12 @@ body{
 
     .contact-box h1{
         font-size: 24px;
+    }
+
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 
 }
