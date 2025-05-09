@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nostra</title>
+    <title>Nostra - Collections</title>
     <link rel="icon" href="bag.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
@@ -28,110 +31,194 @@
   </head>
   <body>
     <!--Navigation bar-->
-    <nav class="navbar">
-        <h1>Nostra</h1>
-        <div class="navbar-links">
-            <p class="navbar-links"><a href="index.html">Home</a></p>
-            <p class="navbar-links"><a href="collections.html">Collections</a></p>
-            <p class="navbar-links"><a href="contact.html">Contact</a></p>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Nostra</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="collections.html">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="navbar-menu-toggle">
-            <i class="fa-solid fa-bars" onclick="showNavBar()"></i>
-        </div>
+      </div>
     </nav>
-    <!--Side Navigation Bar-->
-    <div class="side-navbar">
-        <p style="text-align: right;"><i class="fa-solid fa-xmark" onclick="closeNavBar()"></i></p>
-        <div class="side-navbar-links">
-            <p class="side-navbar-links"><a href="index.html">Home</a></p>
-            <p class="side-navbar-links"><a href="collections.html">Collections</a></p>
-            <p class="side-navbar-links"><a href="contact.html">Contact</a></p>
-        </div>
-    </div>
 
     <!--Product-->
-    
-    <div class="product-section">
-        <form class="product-search">
-            <input type="text" id="search" placeholder="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
-        <h2 style="margin-left: 20px;" class="info">For men</h2>
-        <div class="menProducts" id="product">
-            <div class="product-box">
-                <img src="https://source.unsplash.com/WWesmHEgXDs/200x200/" alt="White Shirt" >
-                <p>White Shirts</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/NMYG69BG_Jg/200x200/" alt="Black Shirt">
-                <p>Black Shirts</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/jC7nVH_Sw8k/200x200/" alt="Pants">
-                <p>Pants</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/lBgCnWqPpAQ/200x200/" alt="Vests">
-                <p>Vests</p>
-            </div>
+    <div class="container py-4">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="text" id="search" class="form-control" placeholder="Search products">
+            <button class="btn btn-dark" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
-        <h2 style="margin-left: 20px;" class="info">For Women</h2>
-        <div class="womenProducts" id="product">
-            <div class="product-box">
-                <img src="https://source.unsplash.com/jSH-NJfAROs/200x200/" alt="White Shirt" >
-                <p>White Shirts</p>
+      </div>
+      
+      <h2 class="mb-4">For Men</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1603252109612-24fa03d145c8?q=80&w=387" class="card-img-top rounded shadow" alt="White Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">White Shirts</p>
             </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/SeeiNC9snZg/200x200/" alt="Black Shirt">
-                <p>Black Shirts</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/XFLW_bXjZVE/200x200/" alt="Pants">
-                <p>Pants</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/ggcJKGpx3pI/200x200/" alt="Jackets">
-                <p>Jackets</p>
-            </div>
+          </div>
         </div>
-        <h2 style="margin-left: 20px;" class="info">For Kids</h2>
-        <div class="kidProducts" id="product">
-            <div class="product-box">
-                <img src="https://source.unsplash.com/e6lWMBIgNso/200x200/?kid white shirt" alt="White Shirt" >
-                <p>White Shirts</p>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=387" class="card-img-top rounded shadow" alt="Black Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">Black Shirts</p>
             </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/n9R0MN3XGvY/200x200/" alt="Black Shirt">
-                <p>Black Shirts</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/dwKiHoqqxk8/200x200/" alt="Shoes">
-                <p>Shoes</p>
-            </div>
-            <div class="product-box">
-                <img src="https://source.unsplash.com/uskuEx2cttA/200x200/?kid vests" alt="Rain Coat">
-                <p>Rain coat</p>
-            </div>
+          </div>
         </div>
-
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=387" class="card-img-top rounded shadow" alt="Pants">
+            <div class="card-body text-center">
+              <p class="card-text">Pants</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=387" class="card-img-top rounded shadow" alt="Vests">
+            <div class="card-body text-center">
+              <p class="card-text">Vests</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="mb-4">For Women</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=387" class="card-img-top rounded shadow" alt="White Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">White Shirts</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=387" class="card-img-top rounded shadow" alt="Black Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">Black Shirts</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?q=80&w=387" class="card-img-top rounded shadow" alt="Pants">
+            <div class="card-body text-center">
+              <p class="card-text">Pants</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=387" class="card-img-top rounded shadow" alt="Jackets">
+            <div class="card-body text-center">
+              <p class="card-text">Jackets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="mb-4">For Kids</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=387" class="card-img-top rounded shadow" alt="White Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">White Shirts</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1513377888081-794d8e958972?q=80&w=387" class="card-img-top rounded shadow" alt="Black Shirt">
+            <div class="card-body text-center">
+              <p class="card-text">Black Shirts</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?q=80&w=387" class="card-img-top rounded shadow" alt="Shoes">
+            <div class="card-body text-center">
+              <p class="card-text">Shoes</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card border-0 h-100">
+            <img src="https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?q=80&w=387" class="card-img-top rounded shadow" alt="Rain Coat">
+            <div class="card-body text-center">
+              <p class="card-text">Rain coat</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--Footer-->
-    <div class="footer">
-        <div class="footer-container">
-            <div class="footer-box-one">
-                <h2 class="heading-text">Nostra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, veniam.</p>
-                <div class="footer-icon-container">
-                    <i class="fa-brands fa-instagram" style="color: white"></i>
-                    <i class="fa-brands fa-twitter" style="color: white"></i>
-                    <i class="fa-brands fa-facebook" style="color: white"></i>
-                </div>
-                <p>@2024 Nostra.com</p>
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-3">Nostra</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, veniam.</p>
+            <div class="d-flex gap-3 mb-3">
+              <a href="#" class="text-white"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-facebook fa-lg"></i></a>
             </div>
+            <p class="mb-0">@2024 Nostra.com</p>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Shop</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">All Collections</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Summer</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Winter</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Affiliates</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Cookie Policy</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>

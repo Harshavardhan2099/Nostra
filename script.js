@@ -1,62 +1,49 @@
-// Script
-var sideNavBar = document.querySelector(".side-navbar")
-
-
-function showNavBar()
-{
-    sideNavBar.style.left = "0"
-}
-
-function closeNavBar()
-{
-    sideNavBar.style.left = "-60%"
-}
-
-var menProductContainer = document.querySelector('.menProducts')
-var womenProductContainer = document.querySelector('.womenProducts')
-var kidProductContainer = document.querySelector('.kidProducts')
-
-var search = document.getElementById('search')
-
-var menProductsList = menProductContainer.querySelectorAll('div')
-var womenProductsList = womenProductContainer.querySelectorAll('div')
-var kidProductsList = kidProductContainer.querySelectorAll('div')
-var infoList = document.querySelectorAll('.info')
-
-
-search.addEventListener('keyup', function(event){
-    var enteredValue = event.target.value.toUpperCase()
-
-    for (let index = 0; index < infoList.length; index++) {
-        infoList[index].style.display = "none"        
+// Script for product search functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Product search functionality
+    var search = document.getElementById('search');
+    if (search) {
+        search.addEventListener('keyup', function(event) {
+            var enteredValue = event.target.value.toUpperCase();
+            
+            // Hide category headers if searching
+            var categoryHeaders = document.querySelectorAll('h2.mb-4');
+            for (let header of categoryHeaders) {
+                header.style.display = enteredValue.trim() !== '' ? "none" : "block";
+            }
+            
+            // Search in all product cards
+            var productCards = document.querySelectorAll('.card');
+            
+            productCards.forEach(function(card) {
+                var productName = card.querySelector(".card-text")?.textContent || "";
+                var productAlt = card.querySelector("img")?.alt || "";
+                
+                if (productName.toUpperCase().indexOf(enteredValue) > -1 || 
+                    productAlt.toUpperCase().indexOf(enteredValue) > -1) {
+                    card.closest('.col-6').style.display = "block";
+                } else {
+                    card.closest('.col-6').style.display = "none";
+                }
+            });
+            
+            // Show "No results" message if no matches
+            var visibleCards = document.querySelectorAll('.col-6[style="display: block;"]');
+            var noResultsMessage = document.getElementById('no-results');
+            
+            if (visibleCards.length === 0 && enteredValue.trim() !== '') {
+                if (!noResultsMessage) {
+                    noResultsMessage = document.createElement('div');
+                    noResultsMessage.id = 'no-results';
+                    noResultsMessage.className = 'col-12 text-center my-5';
+                    noResultsMessage.innerHTML = '<p class="fs-5">No products match your search.</p>';
+                    document.querySelector('.container.py-4').appendChild(noResultsMessage);
+                } else {
+                    noResultsMessage.style.display = 'block';
+                }
+            } else if (noResultsMessage) {
+                noResultsMessage.style.display = 'none';
+            }
+        });
     }
-    for(var i=0; i<menProductsList.length; i++)
-    {
-        var menProductName = menProductsList[i].querySelector("p").textContent
-        if(menProductName.toUpperCase().indexOf(enteredValue) < 0)
-        {
-         menProductsList[i].style.display = "none"
-        }
-        else{
-         menProductsList[i].style.display = "block"
-        }
-
-        var womenProductName = menProductsList[i].querySelector("p").textContent
-        if(womenProductName.toUpperCase().indexOf(enteredValue) < 0)
-        {
-         womenProductsList[i].style.display = "none"
-        }
-        else{
-         womenProductsList[i].style.display = "block"
-        }
-
-        var kidProductName = kidProductsList[i].querySelector("p").textContent
-        if(kidProductName.toUpperCase().indexOf(enteredValue) < 0)
-        {
-         kidProductsList[i].style.display = "none"
-        }
-        else{
-         kidProductsList[i].style.display = "block"
-        }
-    }
-})
+});

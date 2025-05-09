@@ -6,6 +6,9 @@
     <title>Nostra</title>
     <link rel="icon" href="bag.png">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
 
@@ -17,7 +20,6 @@
       rel="stylesheet"
     />
     
-
     <!--Font Awesome-->
     <link
       rel="stylesheet"
@@ -29,140 +31,218 @@
   </head>
   <body>
     <!--Navigation bar-->
-    <nav class="navbar">
-        <h1>Nostra</h1>
-        <div class="navbar-links">
-            <p class="navbar-links"><a href="index.html">Home</a></p>
-            <p class="navbar-links"><a href="collections.html">Collections</a></p>
-            <p class="navbar-links"><a href="contact.html">Contact</a></p>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Nostra</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="collections.html">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="navbar-menu-toggle">
-            <i class="fa-solid fa-bars" onclick="showNavBar()"></i>
-        </div>
+      </div>
     </nav>
-    <!--Side Navigation Bar-->
-    <div class="side-navbar">
-        <p style="text-align: right;"><i class="fa-solid fa-xmark" onclick="closeNavBar()"></i></p>
-        <div class="side-navbar-links">
-            <p class="side-navbar-links"><a href="index.html">Home</a></p>
-            <p class="side-navbar-links"><a href="collections.html">Collections</a></p>
-            <p class="side-navbar-links"><a href="contact.html">Contact</a></p>
-        </div>
-    </div>
 
     <!--Header-->
-    <div class="header">
-        <div>
-            <h1>Level up your style</h1>
-            <p>With our stunning design</p>
-            <button class="shop-button">Shop now</button>
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h1 class="display-5 fw-bold">Level up your style</h1>
+          <p class="fs-4">With our stunning design</p>
+          <button class="btn btn-dark rounded-pill px-4 py-2 mt-3">Shop now</button>
         </div>
-        <div>
-            <img src="https://source.unsplash.com/_3Q3tsJ01nc/" width="300px" height="250px" alt="header_image" class="header-image" style="border-radius: 10px;">
+        <div class="col-md-6 text-center">
+          <div class="header-image-container">
+            <img src="images/header-image.jpg" class="img-fluid rounded shadow header-image" alt="Fashion collection header image">
+          </div>
         </div>
+      </div>
     </div>
+
     <!--Service-->
-    <div class="service">
-        <div class="service-container-one">
-            <div>
-                <h2>We provide best
-                Customer Experience</h2>
-            </div>
-            <div>
-                <p>|| We ensure that our customers have the best shopping experience.</p>
-            </div>
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold">We provide best Customer Experience</h2>
         </div>
-        
-        <div class="service-container-two">
-            <div>
-                <i class="fa-solid fa-face-smile"></i>
-                <h4>Satisfaction guarantee</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, ipsam.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-shirt"></i>
-                <h4>New Arrival Everyday</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, itaque.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-truck"></i>
-                <h4>Fast & Free shipping</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, facilis?</p>
-            </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <p class="mb-0">|| We ensure that our customers have the best shopping experience.</p>
         </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card h-100 p-4 bg-light border-0">
+            <div class="text-center mb-3">
+              <i class="fa-solid fa-face-smile fa-2x"></i>
+            </div>
+            <h4 class="card-title text-center">Satisfaction guarantee</h4>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, ipsam.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card h-100 p-4 bg-light border-0">
+            <div class="text-center mb-3">
+              <i class="fa-solid fa-shirt fa-2x"></i>
+            </div>
+            <h4 class="card-title text-center">New Arrival Everyday</h4>
+            <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, itaque.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 bg-light border-0">
+            <div class="text-center mb-3">
+              <i class="fa-solid fa-truck fa-2x"></i>
+            </div>
+            <h4 class="card-title text-center">Fast & Free shipping</h4>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, facilis?</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--New Arrival-->
-    <h2 style="padding: 20px;">New Arrival</h2>
-    <div class="new-arrival">
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/Egj4Dg107kc/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
+    <div class="container py-4">
+      <h2 class="mb-4">New Arrival</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=387" alt="New arrival item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/BteCp6aq4GI/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1520048480367-7a6a4b6efb2a?q=80&w=387" alt="New arrival item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/p2WUEFGrAdA/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=387" alt="New arrival item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/kP6knT7tjn4/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=387" alt="New arrival item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
+      </div>
+    </div>    <!--Most Wanted-->
+    <div class="container py-4">
+      <h2 class="mb-4">Most Wanted</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1603252109612-24fa03d145c8?q=80&w=387" alt="White Shirt" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=387" alt="Most wanted item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?q=80&w=387" alt="Most wanted item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1588099768523-f4e6a5679d88?q=80&w=387" alt="Most wanted item" class="img-fluid rounded shadow">
+            <button class="btn btn-light position-absolute start-50 translate-middle-x" style="bottom: 20px;">
+              Shop now <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!--Most Wanted-->
-
-    <h2 style="padding: 20px;">Most Wanted</h2>
-    <div class="new-arrival">
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/dwKiHoqqxk8/200x200/" alt="White Shirt" >
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
+    <!--Newsletter-->
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2 class="mb-3">Join our Newsletter</h2>
+          <p class="mb-4">Signup for our email newsletter to get exclusive discounts and updates</p>
+          <div class="mb-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+          </div>
+          <button class="btn btn-dark rounded-pill px-4 py-2">Subscribe</button>
         </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/6OGml3UomZw/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/jRztw-pVdyk/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <div class="new-arrival-container">
-            <img src="https://source.unsplash.com/Bp0LKU8CPdc/200x200/" alt="">
-            <button>Shop now <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-    </div>
-
-    <!--News-->
-    <div class="news-letter">
-        <h2>Joins our News Letter</h2>
-        <p>Signup for our email newsletter to get exclusive discounts and updates</p>
-        <div>
-            <input type="text" class="search">
-        </div>
-        <div>
-            <button>Subscribe</button>
-        </div>
+      </div>
     </div>
 
     <!--Footer-->
-    <div class="footer">
-        <div class="footer-container">
-            <div class="footer-box-one">
-                <h2 class="heading-text">Nostra</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, veniam.</p>
-                <div class="footer-icon-container">
-                    <i class="fa-brands fa-instagram" style="color: white"></i>
-                    <i class="fa-brands fa-twitter" style="color: white"></i>
-                    <i class="fa-brands fa-facebook" style="color: white"></i>
-                </div>
-                <p>@2024 Nostra.com</p>
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-3">Nostra</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, veniam.</p>
+            <div class="d-flex gap-3 mb-3">
+              <a href="#" class="text-white"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+              <a href="#" class="text-white"><i class="fa-brands fa-facebook fa-lg"></i></a>
             </div>
+            <p class="mb-0">@2024 Nostra.com</p>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Shop</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">All Collections</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Summer</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Winter</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Affiliates</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 mt-4 mt-md-0">
+            <h5 class="mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Cookie Policy</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
